@@ -1,0 +1,13 @@
+곽문기 kmoonki@naver.com
+• 한양여자대학교 소프트웨어융합과
+javascript 강의 : 01/11(수) ~ 01/19(목)
+
+†front-end
+1)웹표준 (HTML, cSS, JS)
+2)getBootstrap.com
+1.     최신 자바스크립트 (바닐라 JS(ES6), jQuery)
+2.    OpenAPI (kakao TIE, data.go.kr) - XML, JSON
+3.    추가 : node . js, react
+
+
+https://notepad.pw/dataplay2023
