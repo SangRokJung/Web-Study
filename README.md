@@ -1,3 +1,9 @@
+WEB-STUDY
+=============
+
+
+a professor in charge
+-------------
 곽문기 kmoonki@naver.com
 • 한양여자대학교 소프트웨어융합과
 javascript 강의 : 01/11(수) ~ 01/19(목)
@@ -28,6 +34,7 @@ dummyimage - https://dummyimage.com/ => "lorem ipsum" => http://guny.kr/stuff/kl
 6)https://www.data.go.kr/ 
 7)https://developers.kakao.com/ 
 8)https://developers.naver.com/
+9)https://htmlreference.io/
 
 
 
@@ -99,5 +106,9 @@ server - response(89)
 3)JS - 행위 - Behavior
 
 
-* framework vs. 1ibrary - 주도권
-* low code, no code
+* framework vs. Library ; 주도권
+![Alt text](./_frontend/data/images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-01-11%20%EC%98%A4%ED%9B%84%2012.22.04.png)
+* low code, no code => 아키텍처가 되도록 연습하자!
+개발자 vs. Technition
+* Achitecture(건축) vs. Building(건물)
+* Classvs. Instance(객체) - 붕어빵틀 vs. 붕어빵 - 소나타 설계도 vs. 소나타 자동차
