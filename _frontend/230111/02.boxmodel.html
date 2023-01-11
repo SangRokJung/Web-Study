@@ -7,11 +7,23 @@
 <title>Document</title>
 <style>
     body{
-        background:url(../assets/image/layout_grid.gif);
+        background:url(../assets/image/layout_grid.gif) no-repeat;
+    }
+    div{
+        width: 200px;
+        height: 100px;
+        border: 10px solid red;
+        margin: 0px 0px 0px 40px;
+        <!-- 붙어 있는 영역의 마진이은 큰 마진으로만 설정된다. -->
+    }
+    .ie{
+        box-sizing: border-box;
+        
     }
 </style>
 </head>
 <body>
-
+<div class="w3c"></div>
+<div class="ie"></div>
 </body>
 </html>

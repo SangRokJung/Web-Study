@@ -132,8 +132,8 @@ tattribute vs. property => 속성
 
 * 웹표준 강의 내용(6)   
 1) HTML - block element (width 100%) vs. inline element (actual size)
-'block element - ‹div></div>, <h1>   
-'inline element - ‹span>‹/span> a, img   
+block element - div   
+inline element - span, a, img   
 2) CSS - box model -> margin, border, padding - width   
 3) CSS- 선택자(selector)** -> 가장 중요!!   
 4) CSS - floating -> layout   
@@ -155,3 +155,14 @@ outline -> scaffold(ing), 비계
 
 Devops => cilo - 개발과 운영을 seamless하자   
 MLOps 머신러닝+개발   
+
+cssunit => 상대 단위 vs. 절대 단위 => px? 상대단위 (relative unit)   
+
+pt => 인쇄소 -> DPI (Dot / Inch)   
+em => (1인분 vs. 150g) => 1em == 16pX, 부모의 크기의 상대적으로 계산   
+rem => 절대적    
+4K, 8K   
+4nine, 6nine => 99.99, 99.9999 (순도)   
+
+* font vs. text => font-size vs. text-align   
+* *height vs. line-height   
