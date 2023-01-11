@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+
+div{
+    width: 270px;
+    height: 80px;
+    background: url(/_frontend/assets/image/button-sprite.png) no-repeat;
+}
+div:hover{
+    background-position: 0 -80px;
+}
+div:active{
+    background-position: 0 -160px;
+}
+</style>
+</head>
+<body>
+
+<div></div>
+
+<script>
+// setTimeout(func(){}, duration) : 어떤 시간 후 한번 실행이 된다.
+// setInterval(func(){}, duration) : 이벤트 = event trigger + event handler
+// event-driven lang
+// 대상 + 트리거 + 핸들러
+let move = 0
+document.querySelector('div').onclick = function(){ // this
+    setInterval(function(){
+        if(move < -700){
+            move = 0;
+        } else {
+            move = move - 180;
+        }
+        
+        // console.log(move);
+        document.querySelector('div').style.backgroundPosition = move + 'px 0';
+        console.log(document.querySelector('div').style.backgroundPosition);
+        // 0 -180 -> 0 -360
+    }, 500);
+}
+</script>
+
+</body>
+</html>

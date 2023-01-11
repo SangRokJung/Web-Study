@@ -43,7 +43,7 @@ Tool 소개
 8) https://developers.naver.com/   
 9) https://htmlreference.io/   
 10) https://docs.emmet.io/cheat-sheet/
-   
+11) https://www.iconfinder.com/
    
    
    
@@ -166,3 +166,9 @@ rem => 절대적
 
 * font vs. text => font-size vs. text-align   
 * *height vs. line-height   
+
+
+* Color => RGB vs. CMYK   
+
+*color => RGB VS. CMYK
+*pseudo-class (의사클래스)
