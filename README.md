@@ -102,10 +102,6 @@ client-server 환경 (ex. pol1ing) => 역할(role)
 client - request(요청)   
 server - response(응답)   
 
-* 웹환경   
-client-server 환경 (ex. polling) => 역할(role)   
-client - request( S)   
-server - response(89)   
 * 역할   
 1)HTML - 문서의 뼈대 - structure   
 2)cs - 문서의 표현 - style(presentation)   
@@ -135,7 +131,7 @@ tattribute vs. property => 속성
 
 
 * 웹표준 강의 내용(6)   
-1) HTML - block element vs. inline element   
+1) HTML - block element (width 100%) vs. inline element (actual size)
 'block element - ‹div></div>, <h1>   
 'inline element - ‹span>‹/span> a, img   
 2) CSS - box model -> margin, border, padding - width   
@@ -149,4 +145,13 @@ tattribute vs. property => 속성
 
 
 * 확장자(extension)l vs. MIME - for whom   
-* 'MIME - encType -> text/**, image/**, application/**
+* 'MIME - encType -> text/**, image/**, application/**   
+
+Bracket 대괄호 []   
+Brace 중괄호 (} => 체 (함수, 클래스, 배열..)   
+
+outline vs. border - 참여 여부?   
+outline -> scaffold(ing), 비계   
+
+Devops => cilo - 개발과 운영을 seamless하자   
+MLOps 머신러닝+개발   
