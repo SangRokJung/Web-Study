@@ -1,44 +1,47 @@
 WEB-STUDY
-=============
+=============   
 
-
+   
 a professor in charge
 -------------
-곽문기 kmoonki@naver.com
-• 한양여자대학교 소프트웨어융합과
-javascript 강의 : 01/11(수) ~ 01/19(목)
+곽문기    
+kmoonki@naver.com   
+한양여자대학교 소프트웨어융합과   
 
 front-end
-1)웹표준 (HTML, cSS, JS)
-2)getBootstrap.com
-1.    최신 자바스크립트 (바닐라 JS(ES6), jQuery)
-2.    OpenAPI (kakao TIE, data.go.kr) - XML, JSON
-3.    추가 : node . js, react
+-------------
+1. 웹표준 (HTML, cSS, JS)   
+2. 최신 자바스크립트 (바닐라 JS(ES6), jQuery)   
+3. OpenAPI (kakao TIE, data.go.kr) - XML, JSON   
+4. 추가 : node . js, react   
 
 
-[Tool 소개]
-• 픽픽(picpick) - 캡처, 이미지 리터칭 - 포토샵 대용 
-notepad.pw - 온라인 공유 (https://notepad.pw/dataplay2023)
+Tool 소개
+-------------
+1. 픽픽(picpick) - 캡처, 이미지 리터칭 - 포토샵 대용 
+2. notepad.pw - 온라인 공유 (https://notepad.pw/dataplay2023)
 'Editor - vscode (extension - live server)
-dummyimage - https://dummyimage.com/ => "lorem ipsum" => http://guny.kr/stuff/klorem/ (한글)
+3. dummyimage - https://dummyimage.com/ => "lorem ipsum"
+4. http://guny.kr/stuff/klorem/ (한글)
 
 
 
 
-[참고사이트]
-1)w3schools.com - 강추
-2) 모질라 개발자 사이트 https://developer.mozilla.org/ko/
-3)https://ko.javascript.info/
-4)bootstrap - https://getbootstrap.com/ 
-5)https://jquery.com/ 
-6)https://www.data.go.kr/ 
-7)https://developers.kakao.com/ 
-8)https://developers.naver.com/
-9)https://htmlreference.io/
-
-
-
-
+참고사이트
+-------------
+1) w3schools.com - 강추   
+2) 모질라 개발자 사이트 https://developer.mozilla.org/ko/   
+3)https://ko.javascript.info/   
+4)bootstrap - https://getbootstrap.com/    
+5)https://jquery.com/    
+6)https://www.data.go.kr/    
+7)https://developers.kakao.com/    
+8)https://developers.naver.com/   
+9)https://htmlreference.io/   
+   
+   
+   
+   
 what, why (*), how
 • 기능 (역할), 성능, 제약사항
 • 성능 - 처리량(throughput), 응답시간(response time)- bandwidth, data rate
