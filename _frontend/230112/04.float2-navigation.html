@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    #menu{
+        list-style-type: none;
+        padding: 0;
+        width: 410px;
+        height: 48px;
+        margin: 0 auto;
+    }
+    #menu > li {
+        height: 48px;
+        width: 99px;
+        float: left;
+        background: url(/_frontend/assets/image/sprites-blue-nav.gif) no-repeat;
+        cursor: pointer;
+        text-indent: -9999px;
+    }
+    #menu > li:nth-of-type(2){
+        width: 83px; /* 182 - 99 */
+        background-position: -99px 0;
+    }
+    #menu > li:nth-of-type(3){
+        width: 98px; /* 280 - 182 */
+        background-position: -182px 0;
+    }
+    #menu > li:nth-of-type(4){
+        width: 121px; /* 401 - 280 */
+        background-position: -280px 0;
+    }
+    #menu > li:nth-of-type(1):hover{
+        background-position: 0 -49px;
+    }
+    #menu > li:nth-of-type(2):hover{
+        background-position: -99px -49px;
+    }
+    #menu > li:nth-of-type(3):hover{
+        background-position: -182px -49px;
+    }
+    #menu > li:nth-of-type(4):hover{
+        background-position: -280px -49px;
+    }
+    
+    #menu > li:nth-of-type(1):active{
+        background-position: 0 -98px;
+    }
+    #menu > li:nth-of-type(2):active{
+        background-position: -99px -98px;
+    }
+    #menu > li:nth-of-type(3):active{
+        background-position: -182px -98px;
+    }
+    #menu > li:nth-of-type(4):active{
+        background-position: -280px -98px;
+    }
+    
+    #menu > li:nth-of-type(1).clicked{
+        background-position: 0 -147px;
+    }
+    #menu > li:nth-of-type(2).clicked{
+        background-position: -99px -147px;
+    }
+    #menu > li:nth-of-type(3).clicked{
+        background-position: -182px -147px;
+    }
+    #menu > li:nth-of-type(4).clicked{
+        background-position: -280px -147px;
+    }
+</style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li>home</li>
+        <li>about</li>
+        <li>services</li>
+        <li>contact</li>
+    </ul>
+
+<script>
+    // 객체 배열    
+    // console.log(document.getElementsByTagName('li'));
+    // console.log(document.querySelectorAll('#menu > li'));
+    // 변수 키워드 - var, const, let
+    let menus = document.getElementsByTagName('li');
+    for (let menu of menus){
+        menu.onclick = function(){
+            alert(1);
+            resetMenu();
+            this.setAttribute("class", "clicked");
+        }
+        console.log(menu);
+    }
+
+    function resetMenu(){
+        for (let menu of menus){
+            menu.removeAttribute('class');
+        }
+    }
+</script>
+</body>
+</html>

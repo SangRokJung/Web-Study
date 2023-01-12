@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 0;
+    }
+    .red{
+        background-color: red;
+        top: 50px;
+        left: 50px;
+        
+    }
+    .blue {
+        background-color: blue;
+        top: 150px;
+        left: 150px;
+    
+    }
+
+</style>
+</head>
+<body>
+    <div class="circle red"></div>
+    <div class="circle blue"></div>
+<script>
+    let circles = document.querySelectorAll('.circle');
+    let stack = 0;
+    for(let circle of circles){
+        circle.onclick = function(){
+            stack +=  1;
+            //console.log('circle clicked');
+            circle.style.zIndex = stack;
+        }
+    }
+</script>
+</body>
+</html>

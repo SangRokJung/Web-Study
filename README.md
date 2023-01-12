@@ -202,9 +202,19 @@ JavaScript - selector
 6. this : 해당 문장의 주어.
 7. querySelector, querySelectorAll : 
 8. 구체적일 수 록 CSS의 우선순위가 높아진다.
+9. * 모든 elemtents
 
-• Inline styles - Example: <h1 style="color: pink;">
-• IDs - Example: #navbar
-• Classes, pseudo-classes, attribute selectors - Example: test, :hover, [href]
-• Elements and pseudo-elements - Example: h1, :before
+• Inline styles - Example: "<h1 style="color: pink;">"   
+• IDs - Example: #navbar   
+• Classes, pseudo-classes, attribute selectors - Example: test, :hover, [href]   
+• Elements and pseudo-elements - Example: h1, :before   
 
+html entities - https://www.w3schools.com/html/html_entities.asp  
+
+* float : 이미지와 텍스트 연결   
+* navigation => GNB(global navigation bar), LNB(local~)   
+
+* *구조적 알고리즘 => 순차(sequence), 선택(selection), 반복(iteration)
+* 선택 -> if, switch .. -› for, while, do-while -> break vs. continue
+
+* position : absolute = 기준을 원점으로 잡고 부모가 relative면 그 부모를 기준으로 잡는다. relative = 기준을 상대적으로 잡는다.   

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    #menu {
+        outline: 1px solid red;
+        list-style-type: none;
+        padding: 0;
+        width: 50%;
+        height: 3rem;
+        margin: 0 auto;
+    }
+    #menu > li {
+        outline: 1px dotted blue;
+        line-height: 3rem;
+        width: 25%;
+        float: left;
+        text-align: center;
+        
+    }
+    #menu > li:hover {
+        background-color: yellow;
+        cursor: pointer;
+    }
+    #menu > li:active {
+        background-color: red;
+        cursor: pointer;
+    }
+    .cliked {
+        background-color: magenta;
+    }
+
+</style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+
+<script>
+    //대상 + 트리거 + 핸들러
+    document.querySelector("li:nth-of-type(3)").onclick = function(){
+
+        alert("클릭");
+        this.setAttribute('class', 'clicked');
+    }
+    document.querySelector("li:nth-of-type(4)").onclick = function(){
+
+        alert("클릭");
+        document.querySelector("li:nth-of-type(3)").removeAttribute('class', 'clicked');
+    }
+
+</script>
+</body>
+</html>

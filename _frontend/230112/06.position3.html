@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body{
+        margin: 0 auto;
+    }
+    div.container {
+        width: 60%;
+        margin: 0 auto;
+    }
+    div.container div.quiz {
+        width: 50%;
+        height: 400px;
+        outline: 1px solid lightcoral;
+        float: left;
+        position: relative;
+    }
+    div.quiz .check{
+        width: 128px;
+        height: 128px;
+        background: url(/_frontend/assets/image/pass.png) no-repeat;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="quiz">
+            <div class="check" id="check1"></div>
+            <form>
+                <p>1. 다음 중 대가리가 가장 꽃밭인 놈은?</p>
+                <div>
+                    <input type="radio" id="1_1"
+                    name="contact" value="ENFP">
+                    <label for="1_1">ENFP</label> <br>
+
+                    <input type="radio" id="1_2"
+                    name="contact" value="INFP">
+                    <label for="1_2">INFP</label> <br>
+
+                    <input type="radio" id="1_3"
+                    name="contact" value="INFJ">
+                    <label for="1_3">INFJ</label> <br>
+                  
+                    <input type="radio" id="1_4"
+                    name="contact" value="ISFJ"> 
+                    <label for="1_4">ISFJ</label><br>
+
+                    <input type="radio" id="1_5"
+                    name="contact" value="INFJ">
+                    <label for="1_5">INFJ</label><br>
+                </div> <br>
+                <div>
+                    <button type="button">정답확인</button>
+                </div>
+              </form>
+        </div>
+        <div class="quiz">
+            <div class="check"></div>
+            <p>2. 다음 중 가스라이팅을 가장 잘하는 놈은?</p>
+            <ol>
+                <li>ESTJ</li>
+                <li>ESTP</li>
+                <li>ENFP</li>
+                <li>INTJ</li>
+                <li>ENTJ</li>
+            </ol>
+            <button type="button">정답확인</button>
+        </div>
+        <div class="quiz">
+            <div class="check"></div>
+            <p>3. 다음 중 결혼했을 때 만족감이 가장 좋은 놈은?</p>
+            <ol>
+                <li>INFP</li>
+                <li>ESTP</li>
+                <li>ENFP</li>
+                <li>ESTJ</li>
+                <li>INTP</li>
+            </ol>
+            <button type="button">정답확인</button>
+        </div>
+        <div class="quiz">
+            <div class="check"></div>
+        </div>
+    </div>
+<script>
+    //console.log(document.querySelectorAll("button"))
+    const btns = document.querySelectorAll("button");
+
+    for(let btn of btns) {
+        btn.onclick = function(){
+            let target = document.getElementById('#check1');
+            target.style.display = "block";
+        }
+    }
+
+</script>
+</body>
+
+</html>

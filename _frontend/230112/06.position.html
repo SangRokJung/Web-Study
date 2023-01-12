@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body{
+        background: url(/_frontend/assets/image/layout_grid.gif)no-repeat;
+        margin: 0;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
+    }
+    .relative{
+        background-color: lightblue;
+        position: relative;
+        top: 50px;
+        left: 50px;
+    }
+    .absolute{
+        background-color: lightsalmon;
+        position: absolute;
+        top: 50px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="relative">상대</div>
+    <div class="absolute">절대</div>
+    <div class="relative">상대</div>
+</body>
+</html>
