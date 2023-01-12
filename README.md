@@ -170,5 +170,41 @@ rem => 절대적
 
 * Color => RGB vs. CMYK   
 
-*color => RGB VS. CMYK
-*pseudo-class (의사클래스)
+* color => RGB VS. CMYK   
+* pseudo-class (의사클래스)   
+
+* DDL (definition), DM(manipulation)L, DC (control)L
+* DDL => 테이블을 다루는 -> create~, alter~, drop~
+* DML => 테이블내의 데이터를 다루는 -> CRUD
+* pCL => 권한관리 -> grant, revoke
+* CRUD (Create/Insert, Read/Select, Update, Delete) => DML
+* Read/Select,
+
+* 변수(variables) - named storage - 식별자 + 저장소   
+1) 범위 - 로컬 변수, 글로벌 변수   
+2) 변화 - 정적(static) 변수, 동적 (dynamic) 변수   
+3) 개수 - 스칼라 변수, 오브젝트 변수(배열)  
+컬렉션(collection) - set(집합), list(index 배열), map(named 배열)
+"set => 값의 중복 안됨    
+list(index 배열) -> 배열, linked list map(named 배열) -> 연관배열 (associative array), cf. 딕셔너리   
+
+
+JavaScript - selector   
+-------------
+* https://www.w3schools.com/cssref/css_selectors.php   
+1. 세로 => 부모 자식 관계    
+2. 가로 => 형제 자매 관계   
+3. ">" 를 사용하여 바로 아래에 있는 요소라는뜻   
+4. id : 유일해야한다.   
+5. 스크립트 [selector + trigger + handler]   
+    * document.getElementById()   
+    * document.getElementsByClassName()   
+6. this : 해당 문장의 주어.
+7. querySelector, querySelectorAll : 
+8. 구체적일 수 록 CSS의 우선순위가 높아진다.
+
+• Inline styles - Example: <h1 style="color: pink;">
+• IDs - Example: #navbar
+• Classes, pseudo-classes, attribute selectors - Example: test, :hover, [href]
+• Elements and pseudo-elements - Example: h1, :before
+
