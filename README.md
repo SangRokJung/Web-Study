@@ -41,9 +41,10 @@ Tool 소개
 6) https://www.data.go.kr/    
 7) https://developers.kakao.com/    
 8) https://developers.naver.com/   
-9) https://htmlreference.io/   
-10) https://docs.emmet.io/cheat-sheet/
-11) https://www.iconfinder.com/
+9) https://htmlreference.io/    
+10) https://docs.emmet.io/cheat-sheet/    
+11) https://www.iconfinder.com/    
+12) https://getbootstrap.com/    
    
    
    
@@ -214,7 +215,42 @@ html entities - https://www.w3schools.com/html/html_entities.asp
 * float : 이미지와 텍스트 연결   
 * navigation => GNB(global navigation bar), LNB(local~)   
 
-* *구조적 알고리즘 => 순차(sequence), 선택(selection), 반복(iteration)
+* 구조적 알고리즘 => 순차(sequence), 선택(selection), 반복(iteration)
 * 선택 -> if, switch .. -› for, while, do-while -> break vs. continue
 
-* position : absolute = 기준을 원점으로 잡고 부모가 relative면 그 부모를 기준으로 잡는다. relative = 기준을 상대적으로 잡는다.   
+* position : absolute = 기준을 원점으로 잡고 부모가 relative면 그 부모를 기준으로 잡는다. relative = 기준을 상대적으로 잡는다. 
+
+* Event-Driven Language (Event?)   
+* Event = Event Trigger + Event Handler     
+* mouseover vs. mouseup => over => down => up =› out   
+* load (onload)?   
+- bisplay vs. visibility (opacity)   
+
+* 진화 (Evolution) vs. 혁명 (Revolution) - 변화 (change)    
+* 구조적 프로그래밍(프로세스/기능 중심) -> 정보공학(데이터 중심) -> 객체지향
+(객체 중심) -> CBD(Component based Development)    
+* 1|1 E! (system) - IPO(input, process, output) + monitoring + feedback    
+
+• 영업 (product) vs. 마케팅(customer    
+• 영업 - 어떻게 하면 우리 제품(서비스)을 많이 팔수있을까?    
+• 마케팅 - 어떻게 하면 잘 팔리는 제품(서비스)을 만들 수 있을까?    
+* 만들면 팔리던 시대 -> 영업의 시대 -> 마케팅 시대
+디자인씽킹? - 고객을 알자(공감) + 사고의 방법 (확장적/수축적)    
+• 브레인스토밍    
+
+* DOM (Document Object Model)    
+* BOM (Browser Object Model)    
+객체(object) - 값이 여러개 -> 다세포생울 => 인체도 => 보울찾기 지도    
+인체도 -> 소화계, 골격계, 신경계, ...    
+위 => 사람.소화계.위    
+* 디버깅(debugging) vs, 테스팅(testing)    
+1) 디버깅 - 개발자가 진행    
+2) 테스팅 - 전문 테스터(제3자)    
+*ec(Quality Control) vs. QA(Quality Assurance) - 관심사 (범위)    
+1) QC - product    
+2) QA - process 
+
+* poM scripting (문서의 조작)    
+* Responsive Design(반응형) => RND,    
+* 반응형(responsive) vs. 적응형(adaptive)    
+* WML VS. HTML    

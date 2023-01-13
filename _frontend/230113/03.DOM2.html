@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+
+    #box{
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+    }
+
+</style>
+</head>
+<body>
+    <input type="text" name="query" placeholder="입력후 엔터">
+    <input type="text" name="color" placeholder="입력후 엔터">
+    <div id="box"></div>
+
+<script>
+    document.querySelector('#box').onclick = function(){
+        //this.innerHTML = "<img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb1l89J%2FbtqH8cyJ75h%2FooXp0zfsMsfKgQSuhczhvk%2Fimg.jpg' >";
+        this.innerText = "입력한 값";
+    }
+    document.querySelector('input[name="query"]').onkeydown = function(){
+        if(event.keyCode == 13){
+            document.querySelector('#box').innerText = this.value;
+        }
+    }
+    document.querySelector('input[name="color"]').onkeydown = function(){
+        if(event.keyCode == 13){
+            document.querySelector('#box').innerHTML = "<img src= 'http://placeimg.com/640/480/' + this.value"
+        }
+    }
+    
+</script>
+</body>
+</html>
