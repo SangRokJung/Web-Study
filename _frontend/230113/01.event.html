@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+div.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}    
+</style>
+</head>
+<body>
+
+<button type="button">클릭</button>
+<div class="box"></div>
+
+<script>
+// 대상 + 트리거 + 핸들러 
+document.querySelector('button').onclick = function(){
+    document.querySelector('.box').style.display = 'none';
+}   
+
+document.querySelector('.box').onmouseover = function(){
+    this.style.backgroundColor = 'lightgreen';
+}
+document.querySelector('.box').onmousedown = function(){
+    this.style.borderRadius = '50%';
+}
+document.querySelector('.box').onmouseup = function(){
+    this.style.borderRadius = 0;
+}
+document.querySelector('.box').onmouseout = function(){
+    this.style.backgroundColor = 'lightgray';
+}
+</script>
+</body>
+</html>

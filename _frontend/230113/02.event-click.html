@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<a href="http://daum.net" onclick="myclick()">다음으로 이동</a>
+
+<form name="myForm" method="post" action="reciever.html" onsubmit="return checkForm(this)">
+    <input type="text" name="userid" placeholder="아이디 입력" required>
+    <br>
+    <input type="password" name="passwd" placeholder="비밀번호 입력">
+    <br>
+    <input type="text" name="read" value="읽기전용" readonly>
+    <br>
+    <input type="text" name="active" value="비활성화" disabled>
+    <br>
+    <input type="submit">
+</form>
+
+<script>
+function myclick(){
+    event.preventDefault();
+    location.href = 'http://naver.com';
+}    
+
+// form validation
+// DOM (Document Object Model)
+function checkForm(obj){
+    //document.querySelector('input[name="userid"]'
+    // document.forms["myForm"].
+    // document.myForm.
+    // document.forms[0]
+    // console.log(document.myForm);
+    // console.log(document.forms[0].userid.value);
+    // console.log(obj); // <form>
+    /*    
+    if(document.forms[0].userid.value.length < 3){
+        alert('3글자 이상 입력하시와요');
+        document.forms[0].userid.focus();
+    }
+    */
+    if(obj.userid.value.length < 3){
+        alert('3글자 이상 입력하시와요');
+        obj.userid.focus();
+    }
+    return false;
+    // event.preventDefault();
+}
+</script>
+</body>
+</html>

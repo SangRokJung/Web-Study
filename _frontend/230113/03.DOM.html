@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<ul>
+    <li>1번째</li>
+    <li id="second">2번째</li>
+    <li>3번째</li>
+    <li>4번째</li>
+    <li>5번째</li>
+</ul>
+
+<script>
+// document.getElementById() => 스칼라 객체, ID
+// document.getElementsByTagName() => 배열 객체, TagName
+
+// document.querySelector() => 스칼라 객체, Selector 사용
+// document.querySelectorAll() => 배열 객체, Selector 사용
+
+// 대상 + 트리거 + 핸들러
+document.getElementById('second').onclick = function(){
+    console.log('getElementById()', 1);
+}
+document.getElementsByTagName('li')[2].onclick = function(){
+    console.log('getElementsByTagName()', 2);
+}
+
+document.querySelector('li:nth-of-type(4)').onclick = function(){
+    console.log('querySelector()', 3);
+}
+document.querySelectorAll('li')[4].onclick = function(){
+    console.log('querySelectorAll()', 4);
+}
+</script>
+</body>
+</html>

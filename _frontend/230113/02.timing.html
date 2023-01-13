@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    #box{
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+    }
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+    let move = 0;
+    let size = 100;
+    let box = document.getElementById("box")
+    document.getElementById("box").onclick = function(){
+        setTimeout(function(){
+            console.log(box);
+            move += 50;
+            size += 10;
+            box.style.marginLeft = move + "px";
+            box.style.width = size + "px";
+            box.style.marginTop = move + "px";
+        }, 1000);
+        setInterval(function(){
+            console.log(box);
+            move += 50;
+            size += 10;
+            box.style.marginLeft = move + "px";
+            box.style.width = size + "px";
+            box.style.marginTop = move + "px";
+        }, 1000);
+    }
+
+</script>
+
+</body>
+</html>
