@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap demo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.container {
+    outline: 1px solid red;
+}    
+.row {
+    outline: 1px solid blue;
+}
+.col, .col-2, .col-5 {
+    outline: 1px dotted green;
+    min-height: 50px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <a class="btn btn-success" href="#" role="button">Link</a>
+            <input class="btn btn-danger" type="button" value="Input">
+        </div>
+        <div class="col">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <ul class="list-group">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+            </ul>
+        </div>
+        <div class="col-2"></div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+        <div class="col-5"></div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelector('.btn-primary').onclick = function(){
+    document.querySelector('.alert').setAttribute('class', 'alert alert-danger');
+}  
+
+document.querySelector('.btn-success').onclick = function(evt){
+    evt.preventDefault();
+    // console.log(document.querySelectorAll('.col'));
+    document.querySelectorAll('.col')[2].innerHTML = `<div class="card"><img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p><a href="#" class="btn btn-primary">Go somewhere</a></div></div>`;
+}
+
+const lists = document.querySelectorAll('.list-group-item');
+for(let list of lists) {
+    list.onclick = function(){
+        //console.log(list.innerText);
+        list.remove();
+    }
+}
+
+
+
+</script>
+</body>
+</html>

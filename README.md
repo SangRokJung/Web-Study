@@ -205,9 +205,9 @@ JavaScript - selector
 8. 구체적일 수 록 CSS의 우선순위가 높아진다.
 9. * 모든 elemtents
 
-• Inline styles - Example: "<h1 style="color: pink;">"   
+• Inline styles   
 • IDs - Example: #navbar   
-• Classes, pseudo-classes, attribute selectors - Example: test, :hover, [href]   
+• Classes, pseudo-classes, attribute selectors - Example: test, :hover, 
 • Elements and pseudo-elements - Example: h1, :before   
 
 html entities - https://www.w3schools.com/html/html_entities.asp  
@@ -246,11 +246,16 @@ html entities - https://www.w3schools.com/html/html_entities.asp
 * 디버깅(debugging) vs, 테스팅(testing)    
 1) 디버깅 - 개발자가 진행    
 2) 테스팅 - 전문 테스터(제3자)    
-*ec(Quality Control) vs. QA(Quality Assurance) - 관심사 (범위)    
+* ec(Quality Control) vs. QA(Quality Assurance) - 관심사 (범위)    
 1) QC - product    
 2) QA - process 
 
 * poM scripting (문서의 조작)    
 * Responsive Design(반응형) => RND,    
 * 반응형(responsive) vs. 적응형(adaptive)    
-* WML VS. HTML    
+* WML VS. HTML     
+
+* feeling vs. emotion vs. moods    
+* UI vs. UX - 시각적 요소 vs. 공감각적인 요소(경험)    
+* CDN (Contents Delivery Network)    
+* Cache M vs. Virtual M -    
