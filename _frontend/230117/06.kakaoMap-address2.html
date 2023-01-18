@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<style>
+#map {
+    height: 100vh; /* viewport height */
+}   
+#map > .breadcrumbs {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    font-size: larger;
+    text-indent: 2rem;
+    position: absolute;
+    z-index: 999;
+} 
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <div class="input-group my-3">
+                <input type="text" class="form-control" name="postcode" placeholder="버튼클릭">
+                <button class="btn btn-secondary" type="button">우편번호</button>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="address" readonly>
+            </div>
+        </div>
+        <div class="col-8" id="map">
+            <div class="breadcrumbs">지도를 움직이면 주소가 표시됩니다.</div>
+        </div>
+    </div>
+</div>    
+
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=394688d6ce4c8750122a267b6aa10613&libraries=services"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+const container = document.getElementById('map');
+const options = {
+    center: new kakao.maps.LatLng(37.468301, 126.886243),
+    level: 3
+};
+
+let map = new kakao.maps.Map(container, options);
+
+var mapTypeControl = new kakao.maps.MapTypeControl();
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.BOTTOMLEFT);
+
+
+var geocoder = new kakao.maps.services.Geocoder();
+
+searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+
+kakao.maps.event.addListener(map, 'idle', function() {
+    searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+});
+
+function searchAddrFromCoords(coords, callback) {
+    geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);         
+}
+
+function displayCenterInfo(result, status) {
+    // console.log(result, status); return false;
+    if (status === kakao.maps.services.Status.OK) {
+        /*
+        for(var i = 0; i < result.length; i++) {
+            if (result[i].region_type === 'H') { // 행정동
+                $('#map > .breadcrumbs').text(result[i].address_name);
+                break;
+            }
+        }
+        */
+        for(let key in result){
+            if(result[key].region_type === 'H'){ // 행정동
+                $('#map > .breadcrumbs').text(result[key].address_name);
+                break;
+            }
+        }
+    }    
+}
+
+
+function sample4_execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            // console.log(data);
+            $('input[name="postcode"]').val(data.zonecode);
+            $('input[name="address"]').val(data.roadAddress);
+
+            searchCoordsFromAddr(data.roadAddress);
+        }
+    }).open();
+}
+
+$('.btn-secondary').click(function(){
+    sample4_execDaumPostcode();
+});
+
+function searchCoordsFromAddr(addr){
+    geocoder.addressSearch(addr, function(result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: coords
+            });
+
+            map.setCenter(coords);
+        } 
+    });
+}
+</script>
+</body>
+</html>

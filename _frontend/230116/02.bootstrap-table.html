@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap demo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+   
+</style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-8">
+            <table class="table table-striped table-hover table-bordered">
+                <caption class="caption-top">테이블 1. 예시 테이블</caption>
+                <thead>
+                    <tr>
+                        <th>제목1</th>
+                        <th>제목2</th>
+                        <th>제목3</th>
+                        <th>제목4</th>
+                        <th>조작</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1줄 1칸</td>
+                        <td>1줄 2칸</td>
+                        <td>1줄 3칸</td>
+                        <td>1줄 4칸</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-success">변경</button>
+                                <button type="button" class="btn btn-danger">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2줄 1칸</td>
+                        <td>2줄 2칸</td>
+                        <td>2줄 3칸</td>
+                        <td>2줄 4칸</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-success">변경</button>
+                                <button type="button" class="btn btn-danger">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3줄 1칸</td>
+                        <td>3줄 2칸</td>
+                        <td>3줄 3칸</td>
+                        <td>3줄 4칸</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-success">변경</button>
+                                <button type="button" class="btn btn-danger">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4줄 1칸</td>
+                        <td>4줄 2칸</td>
+                        <td>4줄 3칸</td>
+                        <td>4줄 4칸</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-success">변경</button>
+                                <button type="button" class="btn btn-danger">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+// 변경 
+let btnMods = document.querySelectorAll('.btn-success');
+for(let btnMod of btnMods){
+    btnMod.onclick = function(){
+        let trElement = this.parentElement.parentElement.parentElement;
+        trElement.querySelector('td:nth-of-type(3)').innerHTML = '<span class="text-danger">변경함</span>';
+    }
+}
+
+// 삭제    
+let btnDels = document.querySelectorAll('.btn-danger');
+for(let btnDel of btnDels){
+    btnDel.onclick = function(){
+        //console.log(btnDel.parentElement.parentElement.parentElement.nodeName);
+        let trElement = this.parentElement.parentElement.parentElement;
+        trElement.remove();
+    }
+}    
+</script>
+</body>
+</html>

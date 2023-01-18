@@ -24,7 +24,15 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
+$('input[name="query"]').keydown(function(evt){
+    if(evt.keyCode == 13){
+        // $('.list-group').append('<li class="list-group-item">'+$(this).val()+'</li>');
 
+        $('.list-group').prepend(`<li class="list-group-item">${$(this).val()}</li>`);
+
+        $(this).val('');
+    }
+});
 </script>
 
 </body>

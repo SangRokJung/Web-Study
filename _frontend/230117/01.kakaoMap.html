@@ -58,14 +58,22 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.BOTTOMLEFT);
 
 // + zoom-in
 document.querySelector('#map li:nth-of-type(1)').onclick = function(){
-    let currentLevel = map.getLevel();
-    map.setLevel(currentLevel - 1);
+    let currentLevel = map.getLevel(); // 1~14
+    if(currentLevel > 1){
+        map.setLevel(currentLevel - 1);
+    } else {
+        alert('더 이상 확대되지 않습니다.');
+    }
 }
 
 // - zoom-out
 document.querySelector('#map li:nth-of-type(2)').onclick = function(){
-    let currentLevel = map.getLevel();
-    map.setLevel(currentLevel + 1);
+    let currentLevel = map.getLevel(); // 1~14
+    if(currentLevel < 14){
+        map.setLevel(currentLevel + 1);
+    } else {
+        alert('더 이상 축소되지 않습니다.');
+    }
 }
 </script>
 </body>

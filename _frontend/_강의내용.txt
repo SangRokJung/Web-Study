@@ -1,0 +1,477 @@
+곽문기 kmoonki@naver.com
+`한양여자대학교 소프트웨어융합과 
+
+javascript 강의 : 01/11(수) ~ 01/19(목)
+*front-end 
+1)웹표준 (HTML, CSS, JS)
+2)getBootstrap.com
+3)최신 자바스크립트 (바닐라 JS(ES6), jQuery)
+4)OpenAPI (kakao 지도, data.go.kr) - XML, JSON
+5)추가 : node.js, react 
+
+[Tool 소개]
+`픽픽(picpick) - 캡처, 이미지 리터칭 - 포토샵 대용
+`notepad.pw - 온라인 공유 (https://notepad.pw/dataplay2023)
+`Editor - vscode (cf. Emmet https://docs.emmet.io/cheat-sheet/)
+`dummyimage - https://dummyimage.com/ => "lorem ipsum"
+`https://www.iconfinder.com/
+`character entities: https://oinam.github.io/entities/
+`web fonts: https://fonts.google.com/
+
+*VSCode extension
+1)live server 
+2)Auto Rename Tag
+3)Auto Close Tag
+
+[참고사이트]
+1)w3schools.com - 강추
+`https://htmlreference.io/
+`https://cssreference.io/
+2)모질라 개발자 사이트 https://developer.mozilla.org/ko/
+3)https://ko.javascript.info/
+4)bootstrap - https://getbootstrap.com/
+5)https://jquery.com/
+6)https://www.data.go.kr/
+7)https://developers.kakao.com/
+8)https://developers.naver.com/
+https://velog.io/ => TIL (Today I Learned)
+https://easings.net/
+https://gsgd.co.uk/sandbox/jquery/easing/
+
+
+*coding convetion (코딩 규칙/규약)
+`https://nuli.navercorp.com/
+
+---------------
+`what, why(*), how => 용어!
+`기능(역할), 성능, 제약사항
+`성능 - 처리량(throughput), 응답시간(response time) - bandwidth, data rate
+
+`정보통신(ICT) => 정보전송 + 정보처리
+`IoT => 센싱 + 연결
+`클라우드 => 가상화 기술 + 유틸리티 컴퓨팅
+
+*4차산업관련 기술 위계
+1)기반기술 - 컴퓨팅 파워(HW), 알고리즘(SW), DATA 
+2)핵심기술 - ICBM, DNA
+3)응용기술 - 스마트~
+
+*경제학 노동
+1)기여형 노동 - with tool(사람 중심) -> 효율성 향상 => 도메인 전문가 + IT 전문가
+2)대체형 노동 - 인공지능 (육체+정신) => 로봇
+`automation(자동화) vs. autonomous(자율화)
+`시스템? IPO + monitoring + feedback(되먹임)
+`관리 => 유지 + 보수
+`측정 -> 관리 -> 개선
+
+*경영 vs. IT => SWE BoK (body of knowledge)
+`SI vs. SM 
+*공학 vs. 과학
+1)공학 - 문제를 형식화하고 해결책을 찾는 능력
+2)과학 - 문제를 발굴하고 가설을 검증하는 능력
+
+*알고리즘 - rule + process - 입유명효효
+`입 - 입출력 있어야 (입력 0개 이상, 출력 1개 이상)
+`유 - 유한해야 
+`명 - 명확해야 
+`효율 - 과정에 있어서 개이득 
+`효과 - 결과에 있어서 개이득
+
+`문제? - 
+`requirement vs. specification - 고객 vs. 개발사
+`validation vs. verification - 
+
+*DIKW 계층 
+`data vs. information
+`data -(의미 meaning)-> information -(연결)-> knowledge -(경험)-> wisdom
+
+*IT자격증 - 데이터베이스, 컴퓨터구조, 운영체제, 시스템분석설계, 정보통신, 프로그래밍(C,Java,python,jascript..), 정보보안
+`정보처리기사(필수), 전자계산기조직응용기사, 정보보안기사, 빅데이터분석기사
+`PMP, 정보시스템감리사, 기술사(정보관리, 컴퓨터시스템응용), 기술지도사
+
+*보호(protection, what) vs. 보안(security, how)
+`보안의 3요소 - CIA - 기밀성(confidentiality) + 무결성(Integrity) + 가용성(Availability)
+`redundancy(다중화) vs. diversity(다양화)
+`RAS (Reliability, Availability, Serviceability)
+`신뢰성(Reliability) = 시스템, 고장율
+
+*웹 환경 
+`client-server 환경 (ex. polling) => 역할(role)
+`client - request(요청)
+`server - response(응답)
+
+*역할!!!
+1)HTML - 문서의 뼈대 - Structure 
+`<center>, <font>
+`태그(element) => 의미
+2)CSS - 문서의 표현 - Style(Presentation)
+3)JS - 행위 - Behavior
+
+*<ol> vs. <ul> 
+<ol>
+    <li></li>
+</ol>
+
+<dl><dt><dd>
+<dl>
+    <dt></dt>
+    <dd></dd>
+    <dd></dd>
+</dl>
+
+*<div class="circle">안녕하세요</div>
+*attribute vs. property => 속성
+*URI = URL(location) + URN(name)
+`변수? => named storage -> 식별자 + 저장소
+
+*framework vs. library - 주도권
+*low code, no code => 아키텍처가 되도록 연습하자!
+`개발자 vs. Technition
+*Achitecture(건축) vs. Building(건물)
+*Class vs. Instance(객체) - 붕어빵틀 vs. 붕어빵 - 소나타 설계도 vs. 소나타 자동차
+
+*웹표준 강의 내용(6)
+1)HTML - block element (width 100%) vs. inline element (actual size)
+`block element - <div></div>, <h1></h1>, <ul></ul>, <dl></dl>
+`inline element - <span></span>, <a></a>, <img>
+2)CSS - box model -> margin, border, padding - width 결정(box-sizing)
+3)CSS - 선택자(selector)** -> 가장 중요!!
+`tag name, id/class, 기타속성(attribute)
+`ascendent(조상)-parent-child-descendent(자손)
+`sibling(형제.자매)
+`id 유일해야 => (유일성, 최소성) -> 슈퍼키, 후보키, 주키, 대체키, 참조키 
+4)CSS - floating -> layout
+5)CSS - Layout 
+6)CSS - positioning -> layout
+`absolute(절대) vs. relative(상대)
+7)이후 bootstrap 활용
+
+*확장자(extension) vs. MIME - for whom
+`MIME - encType -> text/**, image/**, application/** 
+
+`Bracket 대괄호 [] 
+`Brace 중괄호 {} => 객체 (함수, 클래스, 배열.. 표현)
+
+`outline vs. border - 멤버 여부?
+`outline -> scaffold(ing), 비계 
+
+DevOps => cilo - 개발과 운영을 seamless하자 
+MLOps
+
+CSS unit => 상대 단위 vs. 절대 단위 => px? 상대 단위(relative unit)
+`px, pt, em, rem (root em)
+`pt => 인쇄소 -> DPI (Dot / Inch)
+`em => (1인분 vs. 150g) => 1em == 16px
+<div> -- 0.8em
+    <p></p> -- 0.8em => 
+</div>
+`1word => 
+`4K, 8K 
+`4nine, 6nine => 99.99, 99.9999 (순도)
+
+*font vs. text => font-size vs. text-align
+*height vs. line-height
+
+*color => RGB vs. CMYK
+
+*pseudo-class (의사클래스)
+*image sprite => 이미지 관리의 효율성 
+
+-------------------------
+01/12(목)
+
+*프로그램 언어 => 표현 언어(HTML,CSS) + 연산 언어
+
+*변수(variables) - named storage - 식별자 + 저장소
+1)범위 - 로컬 변수, 글로벌 변수
+2)변화 - 정적(static) 변수, 동적(dynamic) 변수
+3)개수 - 스칼라 변수, 오브젝트 변수(배열)
+`컬렉션(collection) - set(집합), list(index 배열), map(named 배열) 
+`set => 값의 중복 안됨
+`list(index 배열) -> 배열, linked list
+`map(named 배열) -> 연관배열(associative array), cf. 딕셔너리
+
+*CSS 우선순위!! => 구체적일수록 우선순위가 높아진다
+Cascade Style Sheets
+
+*약속대련!
+`왼손은 거들뿐!
+
+정규표현식(regular expression) - 문자열 검색(탐색)
+
+*의미 + 표현, < => character entity
+1) A < 3 => A는 3보다 작다 => &lt; less than
+2) > => &gt; greater than
+3) ' => &apos;
+4) " => &quot;
+5) copyright => &copy;
+참고) https://oinam.github.io/entities/
+
+*system fonts
+1)serif - 꾸민글자 - ex)바탕
+2)sans-serif - 안꾸민 글자 - ex)돋움, 굴림
+`바탕 vs. 바탕체 => 가변폭 글씨체 vs. 고정폭 글씨체 
+3)typewriter 
+
+*float => 징검다리
+*Navigation => GNB(global navigation bar), LNB(local~)
+
+*API? Application Programming Interface
+=> 나만의 언어로 이해하자!
+=> 프로그램(SW) 사용설명서 -> 함수명, 매개변수(타입/값), 결과..
+
+*메타데이터(metadata) - 데이터를 위한 데이터
+`메타버스 (meta-(uni)verse) - 초월 + 현실 => AR/VR의 확장
+`VR, AR => MR(mixed reality) => XR => CR => meta-verse
+`AR-VR => CPS(cyber phisics system) => 디지털트윈(digital twin)
+`디지털트윈 => 시뮬레이션
+
+`색깔 - 파란, 노란, 초록..
+`품종 - 부사, 아오리, 홍옥..
+`무게 - 100g, 150g, ...
+`원산지 - 문경, 충주, 대구..
+`당도 - 1.1, 1.5, ...
+
+*구조적 알고리즘 => 순차(sequence), 선택(selection), 반복(iteration) 
+`선택 -> if, switch ..
+`반복 -> for, while, do-while -> break vs. continue
+
+*perspective => 평면을 입체화 - 원근법
+
+-------------------------
+01/13(금) 3일차
+
+*javascript = 웹 코딩 + 일반 프로그래밍
+`웹문서의 행위(behavior) 역할 
+`Event-Driven Language (Event?)
+`Event = Event Trigger(실마리) + Event Handler(내용)
+*mouseover vs. mouseup => over => down => up => out
+*keyover(X) vs. keyup 
+*load(onload)? 
+
+`display vs. visibility (opacity)
+
+`DataType? int, string, double, char, boolean, ...
+*변수(variables) => named storage = 식별자(재활용) + 저장소
+1)범위 - 전역변수(global) vs. 지역변수(local)
+2)변화 - 정적변수(static) vs. 동적변수(dynamic)
+3)값의 갯수 - 스칼라변수(scalar) vs. 오브젝트변수(object)
+`오브젝트 - 값이 여러개 .. => 배열, 함수, ...
+`var => const(정적변수), let(동적변수) => 범위(scope)
+
+*함수(function) - 재활용(reuse)
+`main vs. subroutine
+`procedure vs. function - return 유무 => 주도권
+`parameter vs. argument - 매개변수
+
+function sum(x,y){
+    return x + y;
+}
+let mySum = sum(3,4); // 7
+
+*함수(function) vs. 메서드(method) - 주인이 누구?
+
+*진화(Evolution) vs. 혁명(Revolution) - 변화(change)
+*구조적 프로그래밍(프로세스/기능 중심) -> 정보공학(데이터 중심) -> 객체지향(객체 중심) -> CBD(Component based Development)
+`객체지향 vs. CBD => 재활용, compile(상속) vs. runtime binding(인터페이스)
+
+*시스템(system) - IPO(input, process, output) + monitoring + feedback
+*객체(object)? 값이 여러개 .. => 배열, 함수, ...
+*객체(object) vs. 개체(entity) - 변화(시간) 개념, snapshot
+현실세계 => 코드세계 (추상)
+
+*주체(subject) --관계(relationship)-- 상대(object)
+*객체(object) -- 관계(relationship)
+`객체 - 데이터 + 함수 -> 정적 + 동적 => 멤버변수 + 메서드
+*캡추다상정
+1)캡슐화 - 
+2)추상화 - 
+3)다형성 - 내 동생 꼽슬머리.. - overload vs. override
+4)상속 - 수레바퀴를 다시 만들지 마라.. -> 재활용(reuse) -> compile vs. runtime 
+5)정보은닉 - 접근제한자(public, protected, private)
+
+`큐레이션(curation)
+
+feature
+CNN => convolution -> pooling -> fully mapping
+
+`영업(product) vs. 마케팅(customer)
+`영업 - 어떻게 하면 우리 제품(서비스)을 많이 팔수있을까? 
+`마케팅 - 어떻게 하면 잘 팔리는 제품(서비스)을 만들 수 있을까?
+*만들면 팔리던 시대 -> 영업의 시대 -> 마케팅 시대 
+
+디자인씽킹? - 고객을 알자(공감) + 사고의 방법(확장적/수축적)
+`브레인스토밍
+
+*get vs. post => 값(변수)의 전달 방식
+1)get -> 엽서 - 보안취약, 길이제약 - url로 전달
+2)post -> 편지 - 보안덜취약, 길이제약 없음 - header 포함 전달
+
+*CRUD (Creat/Insert, Read/Select, Update, Delete)
+`Select(조회) vs. Insert/Update/Delete(변화)
+`URL문제
+
+http://127.0.0.1:5500/0113/reciever.html => URL
+?
+userid=hong&passwd=1234 => Query-String
+
+userid=hong
+&
+passwd=1234
+
+
+*DOM (Document Object Model)
+*BOM (Browser Object Model)
+`객체(object) - 값이 여러개 -> 다세포생물 => 인체도 => 보물찾기 지도
+`인체도 -> 소화계, 골격계, 신경계, ...
+`위 => 사람.소화계.위
+
+*디버깅(debugging) vs. 테스팅(testing) => 결함을 찾는것, 시행주체
+1)디버깅 - 개발자가 진행
+2)테스팅 - 전문 테스터(제3자)
+*QC(Quality Control) vs. QA(Quality Assurance) - 관심사(범위)
+1)QC - product 
+2)QA - process
+`QCD => Quality, Cost, Delivery - 품질, 비용, 시간
+
+*DOM Scripting (문서의 조작)
+
+*Responsive Design(반응형) => RWD => media-query (분기)
+*반응형(responsive) vs. 적응형(adaptive)
+`WML vs. HTML
+
+*유지보수!
+
+*hoist(도르레)
+
+function doSum(x,y){
+    return x+y;
+}
+
+let sum = doSum(3, 4);
+
+
+*bootstrap? => 시작
+*program vs. process => 폰노이만 구조(현대식 컴퓨터의 prototype)
+
+https://getbootstrap.com/
+
+`feeling vs. emotion vs. moods
+*UI vs. UX - 시각적 요소 vs. 공감각적인 요소(경험)
+
+*CDN (Contents Delivery Network)
+`Cache M vs. Virtual M - 속도 향상 vs. 메인메모리 용량 확장
+`기능(역할), 성능, 제약사항
+
+*link vs. anchor
+
+
+*javascript vs. java - Netscape(live script) => ECMAScript
+`Jscript, VBScript
+-------------------------
+01/16(월) 4일차
+
+*응집도(cohesion) vs. 결합도(coupling) => 모듈화(module)
+=> 중복, 종속 => 응집도 높이고, 결합도 낮추는 방식의 프로그래밍
+
+*알고리즘 => 어떤 문제를 해결하기 위한 rule + process
+*프로그램 => 특정 프로그래밍 언어로 알고리즘을 구현한 것.
+
+*시맨틱(semantic) 요소 => 표현 + 의미
+*<i></i> vs. <em></em> => emphasis
+*<b></b> vs. <strong></strong> => more emphasis
+
+*프로토콜(protocol)? 구문(syntax) + 의미(semantic) + timing
+
+*LOD (Linked Open Data)
+`RDF (Resource Definition Framework) => 자원 정의 표준 
+
+*XML vs. JSON 
+1)XML(eXtensible Markup Language) - 데이터 교환 표준 (택배 박스)
+<age>24</age>
+2)JSON(JavaScript Object Notation) - 데이터 교환 표준  
+age:24
+
+*웹 1.0(소비) => 웹 2.0(참여,공유,공개) => 웹 3.0(시맨틱웹 => 블록체인기반)
+
+*iconic font => icon(이미지) + font(문자) 
+
+*SVG(Scalable Vector Graphic) 
+*래스터(raster) vs. 벡터(vector)
+
+*속성 vs. 메서드 => 괄호의 유무
+
+*lazy binbing
+
+*AJAX 
+Asynchronous** (비동기)
+Javascript 
+And 
+XML
+
+*기능, 성능, 제약상항 => throughput(처리량), response time(응답시간) => bandwidth, date rate
+*[직렬 vs. 병렬], [중앙집중 vs. 분산]
+`직렬 --병행/동시성(concurrency)-- 병렬(의존성)
+`중앙집중 - cloud - cf. edge -> fog -> cloud
+`분산 - blockchain => attack surface
+*보안의 3요소 => CIA 
+
+if(1 == '1') // true - 값만 비교
+if(1 === '1') // false - 값 + 데이터타입 비교 === vs. !==
+
+
+*jQuery? => 자바스크립트를 사용하는 신박한 방법! (wrapper 형식)
+
+*plain javascript, pure javascript, vanilla javascript
+
+*Attribute (in HTML) vs. Property (in CSS) => 속성
+1)Attribute => 정적 속성, Before Market
+2)Property => 동적 속성, After Market
+
+*위도(latitude), 경도(longitude)
+1)위도 - 180도(-90~90) - y축
+2)경도 - GMT +9H, 360/24 = 15도/시간, x축
+-------------------------
+01/17(화) 5일차
+
+`delimiter(구분자)
+`CSV(comma separate value)
+`연관배열 (Associative Array) - cf. 딕셔너리 dictionary
+
+`대상 + 트리거 + 처리기(핸들러, 리스너)
+`리스너 -> 위임
+
+*easing? 완화 => 속도조절 
+
+*HTML3 -> HTML4.01(XHTML1.0) -> HTML5 
+<a>~~</a>
+<p>, <br>, ...
+닫기 태그 => 브라우저 간 달리보이는 문제 => (sol'n) HTML + XML => XHTML
+`솔루션 => 문법을 가까롭게 하자!
+`XML => 데이터 교환 표준 => 문법(사용법) + 데이터 컨테이너
+`열기 태그와 닫기 태그를 한다.
+`속성은 속성값을 반드시 표현한다. 
+<age name="query" readonly="readonly">24</age>
+<age></age> vs. <age> </age> => <age /> (암수한몸)
+
+AJAX ==> 페이지 단위 -> (장점) 부분 갱신/속도 향상, (단점) URL
+Asynchronous - (방법) 비동기* 
+Javascript - (주체) 핸들링을 누가?
+And 
+XML - (데이터) XML, JSON, HTML, TEXT
+
+AJAX => 조각 파일 (fragment)
+
+*직렬 vs. 병렬 (속도), 중앙집중 vs. 분산
+
+*SOP (Same Origin Policy, 동일 출처 정책) -> 보안
+
+*SaaS => as a Service => servitization(제품의 서비스화)
+-------------------------
+01/18(수) 6일차
+
+
+
+-------------------------
+01/19(목) 7일차(종료일)
+

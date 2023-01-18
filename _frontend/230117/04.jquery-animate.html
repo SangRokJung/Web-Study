@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:200px;
+    height:400px;
+    background-color:lightcoral;
+    position:absolute;
+}    
+</style>
+</head>
+<body>
+
+<div id="box"></div>    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="/assets/jquery.easing-1.4.2/jquery.easing.min.js"></script>
+<script>
+$('#box').click(function(){
+    $(this).animate({
+        opacity: .4,
+        left: '+=800',
+        height: 'toggle'
+    }, 2000, 'easeOutElastic', function(){
+        alert('애니메이션 끝');
+    });
+});    
+</script>
+</body>
+</html>
