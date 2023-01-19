@@ -470,8 +470,30 @@ AJAX => 조각 파일 (fragment)
 -------------------------
 01/18(수) 6일차
 
+float -(해제)-> clear
+setTimeout() -(해제)-> clearTimeout()
+setInterval() -(해제)-> clearInterval() 
 
+파비콘(favicon) https://www.favicon.cc/
 
+*mashup(매쉬업) - 여러개의 openAPI 결합하여 새로운 서비스를 만드는 방법
+`tourAPI + kakao map 
+
+JSON
+
+*자동화 vs. 최적화 ?
+*모제최자 => 모니터링 -> 제어 -> 최적화 -> 자동화(자율화)
+*RPA(Robot Process Automation) vs. BPM(Biz Process Mgmt)
+`IFTTT, MS Power Automate
+
+*PPRR => Prevention(예방) -> Prepareness(대비) -> Response(대응) -> Recovery(회복)
+`백신 -> 마스크/손씻기 -> PCR/격리 -> 치료제
+
+*웹 접근성 => 누구나 웹을 이용할 수 있도록 하자!
 -------------------------
 01/19(목) 7일차(종료일)
 
+`tourAPI 예제
+`kakao 검색 도서 응용
+`kakao oven, 
+`project 화면 구성 => 미니 프로젝트

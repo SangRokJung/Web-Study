@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:100px;
+    height:100px;
+    background-color:lightcoral;
+    position:absolute;
+}    
+</style>
+</head>
+<body>
+
+<div id="box"></div>    
+
+<script>
+// setTimeout(function, duration) vs. setInterval(function, duration) 
+/*
+document.querySelector('#box').onclick = function(){
+    // console.log(this);
+    // let that = this;
+
+    setTimeout(function(){
+        console.log(this);
+    }, 1000);
+
+    setTimeout(() => console.log(this), 1000);
+}   
+*/
+let move = 0;
+let flag = false;
+let interval = 0;
+document.querySelector('#box').onclick = function(){
+    flag = !flag;
+    clearInterval(interval);
+    interval = setInterval(() => {
+        if(flag){
+            move += 10; // move = move + 10;
+        } else {
+            move -= 10;
+        }
+        
+        this.style.left = `${move}px`; // move + 'px'
+    }, 200);
+
+    console.log(interval);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <input type="search" name="query" class="form-control my-3" placeholder="검색어 입력후 엔터">
+        </div>
+        <div class="col-9"></div>
+    </div>
+</div>    
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+const myModal = new bootstrap.Modal('#exampleModal');
+const myModalEl = document.querySelector('#exampleModal');
+
+myModalEl.addEventListener('hidden.bs.modal', event => {
+    $('#exampleModal').find('.modal-body').empty();
+});
+
+$(document).on('click', 'figure', function(){
+    let url = `https://www.youtube.com/embed/${$(this).data('url')}`;
+    let title = $(this).find('figcaption').text();
+
+    $('#exampleModal').find('.modal-title').text(title);
+    $('#exampleModal').find('.modal-body').html(`
+    <div class="ratio ratio-16x9">
+        <iframe src="${url}" title="${title}" allowfullscreen></iframe>
+    </div>
+    `);
+
+    myModal.show();
+});
+
+$('input[name="query"]').keydown(function(event){
+    if(event.keyCode == 13){ // enter-click
+        let query = $(this).val();
+        if(query.length > 2){
+            fetchVideoClip(query);
+        } else {
+            alert('3글자 이상 검색어를 입력하세요.');
+        }
+    }
+});
+
+// via kakao 검색 API
+function fetchVideoClip(query){
+    $.ajax({
+        url: 'https://dapi.kakao.com/v2/search/vclip',
+        dataType: 'JSON',
+        data: {
+            query: query
+        },
+        headers: {
+            Authorization: 'KakaoAK 241fc540739b62f459b36dbfcf041115'
+        }
+    }).done(function(data){
+        // console.log(data.documents);
+        let rs = []; // 리터럴 litheral
+        $.each(data.documents, function(k,v){
+            if(v.url.indexOf('youtube.com') === -1){
+                return true; // continue;
+            }
+            rs.push(`
+        <div class="col-4 my-3">
+            <figure class="figure" data-url="${v.url.split('=')[1]}">
+                <img src="${v.thumbnail}" class="figure-img img-fluid rounded" alt="${v.title}">
+                <figcaption class="figure-caption">${v.title}</figcaption>
+            </figure>
+        </div>
+            `);
+        });
+
+        $('.col-9').html(`<div class="row">${rs.join('')}</div>`);
+    });
+}
+</script>
+</body>
+</html>

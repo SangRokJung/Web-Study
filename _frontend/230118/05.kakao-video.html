@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="icon" href="/assets/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <input type="search" name="query" class="form-control my-3" placeholder="검색어 입력후 엔터">
+        </div>
+        <div class="col-9"></div>
+    </div>
+</div>    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$('input[name="query"]').keydown(function(event){
+    if(event.keyCode == 13){ // enter-click
+        let query = $(this).val();
+        if(query.length > 2){
+            fetchVideoClip(query);
+        } else {
+            alert('3글자 이상 검색어를 입력하세요.');
+        }
+    }
+});
+
+// via kakao 검색 API
+function fetchVideoClip(query){
+    $.ajax({
+        url: 'https://dapi.kakao.com/v2/search/vclip',
+        dataType: 'JSON',
+        data: {
+            query: query
+        },
+        headers: {
+            Authorization: 'KakaoAK 241fc540739b62f459b36dbfcf041115'
+        }
+    }).done(function(data){
+        // console.log(data.documents);
+        let rs = []; // 리터럴 litheral
+        $.each(data.documents, function(k,v){
+            if(v.url.indexOf('youtube.com') === -1){
+                return true; // continue;
+            }
+            let url = `https://www.youtube.com/embed/${v.url.split('=')[1]}`;
+            rs.push(`
+        <div class="col-4 my-3">
+            <div class="ratio ratio-16x9">
+                <iframe src="${url}" title="${v.title}" allowfullscreen></iframe>
+            </div>
+        </div>
+            `);
+        });
+
+        $('.col-9').html(`<div class="row">${rs.join('')}</div>`);
+    });
+}
+</script>
+</body>
+</html>
